@@ -107,8 +107,8 @@ void manageTail() {
 
 void checkTailCollision() {
   //If the snake crosses its own tail, shrink the tail back to one segment
-  for(Segment s:tail){
-   if(s.x == head.x && s.y == head.y){
+  for(int i=0; i< tail.size();i++){
+   if(tail.get(i).x == head.x && tail.get(i).y == head.y){
     foodEaten = 1;
     tail.clear();
     tail.add(new Segment(head.x,head.y));
